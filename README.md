@@ -1,1 +1,15 @@
-# EaseXA CEP panel for Adobe After Effects to shape easing, speed, influence, and bounce curves.Created by [Bruno Jorri](https://www.instagram.com/brunojorri_work/).## Quick install (Windows)Open **PowerShell** and run this single command:```powershell$u='https://github.com/brunojorri/EaseX/raw/main/EaseX-v0.1.1.zip';$z=Join-Path $env:TEMP 'EaseX.zip';$d=Join-Path $env:APPDATA 'Adobe\CEP\extensions\com.easex.panel';Invoke-WebRequest $u -OutFile $z;New-Item -ItemType Directory -Force $d|Out-Null;Expand-Archive $z -DestinationPath $d -Force;New-Item 'HKCU:\Software\Adobe\CSXS.12' -Force|Out-Null;New-ItemProperty 'HKCU:\Software\Adobe\CSXS.12' -Name PlayerDebugMode -PropertyType String -Value 1 -Force|Out-Null```Restart After Effects, then open **Window > Extensions > EaseX**. This development build enables CEP debug mode so unsigned local extensions can load.## Features- Edit incoming and outgoing influence visually or numerically.- Speed Graph for temporal easing.- Value Graph with signed overshoot and generated bounce keyframes.- Built-in curve library and custom saved presets.## Usage1. Select animated properties and keyframes.2. Use **Speed graph** for classic easing.3. Use **Value graph** with at least two selected keyframes to generate real bounce keyframes.4. Click **Apply**.## LicenseAll rights reserved. Contact Bruno Jorri for permission to use, distribute, or modify this project.
+# EaseX
+
+Painel CEP para After Effects: ajuste visual de easing, influence, speed e bounce.
+
+## Instalação rápida (Windows)
+
+Abra o PowerShell e execute:
+
+```powershell
+$u='https://github.com/brunojorri/EaseX/raw/main/EaseX-v0.1.1.zip';$z=Join-Path $env:TEMP 'EaseX.zip';$d=Join-Path $env:APPDATA 'Adobe\CEP\extensions\com.easex.panel';Invoke-WebRequest $u -OutFile $z;New-Item -ItemType Directory -Force $d|Out-Null;Expand-Archive $z -DestinationPath $d -Force;New-Item 'HKCU:\Software\Adobe\CSXS.12' -Force|Out-Null;New-ItemProperty 'HKCU:\Software\Adobe\CSXS.12' -Name PlayerDebugMode -PropertyType String -Value 1 -Force|Out-Null
+```
+
+Reinicie o After Effects e abra **Window > Extensions > EaseX**.
+
+[Instagram profissional — @brunojorri_work](https://www.instagram.com/brunojorri_work/)
